@@ -119,7 +119,14 @@ class Form extends React.Component {
               value={ cardTrunfo }
             />
           </label>
-          <button type="submit" data-testid="save-button">Salvar</button>
+          <button
+            type="submit"
+            data-testid="save-button"
+            disabled={ isSaveButtonDisabled }
+            onClick={ onSaveButtonClick }
+          >
+            Salvar
+          </button>
         </form>
       </div>
     );
