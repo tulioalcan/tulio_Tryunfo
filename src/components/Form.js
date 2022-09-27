@@ -19,10 +19,10 @@ class Form extends React.Component {
 
     return (
       <div className="Form">
-        <h1>Carta</h1>
+        <h1>Form</h1>
         <form>
-          Name
           <label htmlFor="name">
+            Name
             <input
               type="text"
               name="name"
