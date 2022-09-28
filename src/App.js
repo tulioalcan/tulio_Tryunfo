@@ -94,6 +94,11 @@ class App extends React.Component {
     }));
   };
 
+  hasTrunfo = () => {
+    const { cardList } = this.state;
+    return cardList.some((card) => card.cardTrunfo);
+  };
+
   render() {
     const isDisable = this.validateForm();
     const {
@@ -121,6 +126,7 @@ class App extends React.Component {
           isSaveButtonDisabled={ isDisable }
           onSaveButtonClick={ this.handleClickCardList }
           onInputChange={ this.onInputChange }
+          hasTrunfo={ this.hasTrunfo() }
         />
         <Card
           cardName={ cardName }
