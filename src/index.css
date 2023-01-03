@@ -11,3 +11,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  /* background-color: #052727; */
+  padding: 20px;
+  position: relative;
+  width: 1280px;
+  height: 3578px;
+}
+
+.logo {
+  position: absolute;
+  width: 504.31px;
+  height: 302px;
+  left: 387.92px;
+  top: 76px;
+}
+
+.box {
+  display: flex;
+}
+
+.Form {
+  position: absolute;
+  width: 300px;
+  height: 721px;
+  left: 78px;
+  top: 380px;
+}
+
+.campo {
+  position: absolute;
+  width: 1124px;
+  height: 75px;
+  left: 500px;
+  top: 380px;
+}

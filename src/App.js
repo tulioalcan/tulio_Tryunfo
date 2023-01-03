@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
+import logo from './logo.png';
 
 class App extends React.Component {
   constructor() {
@@ -114,45 +115,48 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <div>
-        <Form
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-          isSaveButtonDisabled={ isDisable }
-          onSaveButtonClick={ this.handleClickCardList }
-          onInputChange={ this.onInputChange }
-          hasTrunfo={ this.hasTrunfo() }
-        />
-        <Card
-          cardName={ cardName }
-          cardDescription={ cardDescription }
-          cardAttr1={ cardAttr1 }
-          cardAttr2={ cardAttr2 }
-          cardAttr3={ cardAttr3 }
-          cardImage={ cardImage }
-          cardRare={ cardRare }
-          cardTrunfo={ cardTrunfo }
-        />
-        {cardList.map((newCard) => (
-          <Card
-            key={ newCard.cardName }
-            cardName={ newCard.cardName }
-            cardDescription={ newCard.cardDescription }
-            cardAttr1={ newCard.cardAttr1 }
-            cardAttr2={ newCard.cardAttr2 }
-            cardAttr3={ newCard.cardAttr3 }
-            cardImage={ newCard.cardImage }
-            cardRare={ newCard.cardRare }
-            cardTrunfo={ newCard.cardTrunfo }
+      <>
+        <img src={ logo } className="logo" alt="logo-tryunfo" />
+        <div className="box">
+          <Form
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+            isSaveButtonDisabled={ isDisable }
+            onSaveButtonClick={ this.handleClickCardList }
+            onInputChange={ this.onInputChange }
+            hasTrunfo={ this.hasTrunfo() }
           />
-        ))}
-      </div>
+          <Card
+            cardName={ cardName }
+            cardDescription={ cardDescription }
+            cardAttr1={ cardAttr1 }
+            cardAttr2={ cardAttr2 }
+            cardAttr3={ cardAttr3 }
+            cardImage={ cardImage }
+            cardRare={ cardRare }
+            cardTrunfo={ cardTrunfo }
+          />
+          {cardList.map((newCard) => (
+            <Card
+              key={ newCard.cardName }
+              cardName={ newCard.cardName }
+              cardDescription={ newCard.cardDescription }
+              cardAttr1={ newCard.cardAttr1 }
+              cardAttr2={ newCard.cardAttr2 }
+              cardAttr3={ newCard.cardAttr3 }
+              cardImage={ newCard.cardImage }
+              cardRare={ newCard.cardRare }
+              cardTrunfo={ newCard.cardTrunfo }
+            />
+          ))}
+        </div>
+      </>
     );
   }
 }

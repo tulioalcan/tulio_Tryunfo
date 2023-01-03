@@ -23,6 +23,7 @@ class Form extends React.Component {
         <form>
           Name
           <label htmlFor="cardName">
+            <br />
             <input
               type="text"
               name="cardName"
@@ -33,8 +34,11 @@ class Form extends React.Component {
               value={ cardName }
             />
           </label>
+          <br />
+          <br />
           <label htmlFor="cardDescription">
             Description
+            <br />
             <input
               id="cardDescription"
               type="textarea"
@@ -45,6 +49,8 @@ class Form extends React.Component {
               value={ cardDescription }
             />
           </label>
+          <br />
+          <br />
           <label htmlFor="cardAttr1">
             Attr1
             <input
@@ -56,6 +62,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
               value={ cardAttr1 }
             />
+            <br />
           </label>
           <label htmlFor="cardAttr2">
             Attr2
@@ -68,6 +75,7 @@ class Form extends React.Component {
               onChange={ onInputChange }
               value={ cardAttr2 }
             />
+            <br />
           </label>
           <label htmlFor="cardAttr3">
             Attr3
@@ -80,7 +88,10 @@ class Form extends React.Component {
               onChange={ onInputChange }
               value={ cardAttr3 }
             />
+            <br />
           </label>
+          <br />
+          <br />
           <label htmlFor="cardImage">
             Image
             <input
@@ -93,6 +104,8 @@ class Form extends React.Component {
               value={ cardImage }
             />
           </label>
+          <br />
+          <br />
           <label htmlFor="cardRare">
             Rare
             <select
@@ -109,6 +122,7 @@ class Form extends React.Component {
               <option value="muito raro">Muito Raro</option>
             </select>
           </label>
+          <br />
           { hasTrunfo
             ? <p>Você já tem um Super Trunfo em seu baralho</p>
             : (
